@@ -64,7 +64,7 @@ if [[ ${osvers_major} -ge 11 ]]; then
     # Check Rosetta LaunchDaemon. If no LaunchDaemon is found,
     # perform a non-interactive install of Rosetta.
     if [[ ! -f "/Library/Apple/System/Library/LaunchDaemons/com.apple.oahd.plist" ]]; then
-      /usr/sbin/softwareupdate -install-rosetta -agree-to-license
+      /usr/sbin/softwareupdate --install-rosetta --agree-to-license
       if [[ $? -eq 0 ]]; then
         mylogger "Rosetta has been successfully installed."
       else
